@@ -1,0 +1,208 @@
+<style>
+{{asset "/reports/obuka/ReportDrugi/report-drugi.css"}}
+</style>
+<head>
+    <link rel="stylesheet" href="report-drugi.css">
+
+    <meta charset="utf-8">
+</head>
+
+
+<body>
+    <header>
+        <div class="headArea">
+            <img class="imgSize" <img src="{{asset "/reports/WhatsApp Image 2022-03-15 at 20.44.03.jpeg" "dataURI"}}" />
+        </div>
+        <div class="textArea">
+            <p>Pomorski fakultet u Splitu<br>
+                Rudera Boškovica 37, HR-21000 Split<br>
+                tel.:+385 (0)21 619 399, Porta<br><br>
+                Registrirano na Trgovačkom sudu u Splitu<br>
+                MBS: 060144741, OIB: 24624257529, MB: 01406043<br>
+                Poslovna banka: OTP banka,<br>
+                IBAN: HR2324070001100059179, SWIFT: OTPVHR2X<br>
+                www.pfst.unist.hr, E-mail: pomorski@pfst.hr
+            </p>
+        </div>
+    </header>
+
+<main>
+        <div class="textArea-2">
+            <p>Manenica Ante<br>
+            OIB: 50077557350<br>
+            Zrinski i Frankopana 39<br>
+            20350 Metković</p>
+        </div>
+        <div class="container1">
+            <div class="par1">
+                <p>Dat. isporuke <br>
+                Datum dospjeća  <br>
+                Mjesto, dana</p>
+            </div>
+            <div class="par2">
+                <p>
+                08.03.2022.<br>
+                08.03.2022.<br>
+                Split 08.03.2022.</p>
+            </div>
+            <div class="par3">
+                <p>
+                    Referent <br>
+                    Odgovorna osoba
+                </p>
+            </div>
+            <div class="par4">
+                <p>
+                    Marija Dragaš<br>
+                    prof. dr. sc. Pero Vidan
+                </p>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="par5">
+                    <p id="textRac"><b>Račun</b><br></p>
+            </div>
+            <div class="par6">
+                <p>22-361-000267</p>
+            </div>
+        </div>
+
+
+
+    <hr class="new1">
+    <hr class="new2">   
+
+
+<table border="1" style="border-left: 0px; border-right: 5px white solid" cellpadding="5" cellspacing="0" width="780" bgcolor="#ffffcd">
+
+    <tr bgcolor="#ccc" style="border: 1px black solid">
+        <th style="border-left: 1px white solid" scope="col" width="200">Ident</td>
+        <th scope="col" width="500">Naziv</td>
+        <th scope="col" width="100">Količina</td>
+        <th scope="col" width="100">MJ</td>
+        <th scope="col" width="300">Cijena</td>
+        <th scope="col" width="200">R. %</td>
+        <th scope="col" width="200">PDV %</td>
+        <th style="border-right: 1px white solid" scope="col" width="600">Vrijednost bez PDV</td>
+    </tr>
+
+</table>
+
+<div class="container3">
+    <div class="p1">
+        <p>PROMO<br>
+        CIJA_RE<br>
+        F
+        </p>
+    </div>
+
+    <div class="p2">
+        <p>
+        Promocija 2021./22. </p>
+    </div>
+
+     <div class="p3">
+        <p>
+        1,00
+        </p>
+        </div>
+
+     <div class="p4">
+        <p>
+        KOM
+        </p>
+    </div>
+
+     <div class="p5">
+        <p>
+        400,00
+        </p>
+    </div>
+
+     <div class="p6">
+        <p>
+       0,00
+        </p>
+    </div>
+
+    <div class="p7">
+        <p>
+       0,00
+        </p>
+    </div>
+
+     <div class="p8">
+        <p>
+       400,00
+        </p>
+    </div>
+</div>
+<div class="leftOne";><p><b>Slovima</b>&nbsp&nbsp&nbsp četiristo, HRK</p></div>
+
+    </main>
+
+  
+
+  <div style="float:left;width:30%;" class="middleOne";>
+      
+   <p> 
+        <b>Ukupno</b>       
+    </p>
+    <p>
+        <b>PDV</b> 
+    </p>
+    <hr width="450" color="black"> </hr>
+    <p> 
+        <b>Za platiti &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   HRK</b>
+       
+    </p>
+    <hr width="450" color="black"> </hr>
+     
+    </div>
+    
+</div>
+
+    <div style="float:right;width:25%;" class="rightOne";>
+    
+       <p>
+            <b>400,00</b>
+       </p> 
+        <p>
+            <b>0,00</b>
+       </p>
+      <hr width="200" color="black"> </hr>
+        <p>
+            <b>400,00</b>
+       </p>
+       <hr width="200" color="black"> </hr>
+          
+  </div>
+  
+  <div style="float:right;width:100%;"class="payment";>
+      
+      <p>
+            Oslobođeno PDV-a sukladno Članku 39. st. 1 pod i), Zakona o porezu na dodanu vrijednost.
+            <p>
+            Račun je izdan elektroničkim putem te je pravovaljan bez pečata i potpisa.
+            </p>
+            
+            
+       </p>
+       <br></br>
+       <p>U plaćanju platnim nalogom navedite model 00 i poziv <b>26722</b> </p>
+       
+      </div>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
