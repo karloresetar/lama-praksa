@@ -1,23 +1,80 @@
-<style>
-{{asset "/reports/obuka/ReportDrugi/report-drugi.css"}}
-</style>
 <head>
-    <link rel="stylesheet" href="report-drugi.css">
-
+    <style> {{asset "/reports/Obuka/ReportDrugi/report-drugi.css"}} </style>
     <meta charset="utf-8">
-</head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script>{{asset "/reports/Obuka/ReportDrugi/pdf417.js"}}</script>
+    <script>{{asset "/reports/Obuka/ReportDrugi/pdf417-min.js"}}</script>
+    <script>{{asset "/reports/Obuka/ReportDrugi/bcmath-min.js"}}</script> 
 
+    <script>  
+        window.onload = function() {   
+            generate();     
+        }
+
+        function generate() {
+            var textToEncode = "HRVHUB30\nHRK\n" + 
+                "000000000012355\n"+
+                "ZELJKO SENEKOVIC\n"+
+                "IVANECKA ULICA 125\n"+
+                "42000 VARAZDIN\n"+
+                "2DBK d.d.\n"+
+                "ALKARSKI PROLAZ 13B\n"+
+                "21230 SINJ\n"+
+                "HR1210010051863000160\n"+
+                "HR01\n"+
+                "7269-68949637676-00019\n"+
+                "COST\n"+
+                "Troskovi za 1. mjesec\n"
+
+            PDF417.init(textToEncode);             
+
+            var barcode = PDF417.getBarcodeArray();
+
+            // block sizes (width and height) in pixels
+            var bw = 2;
+            var bh = 2;
+
+            // create canvas element based on number of columns and rows in barcode
+            var container = document.getElementById('barcode');
+            container.removeChild(container.firstChild);
+
+            var canvas = document.createElement('canvas');
+            canvas.width = bw * barcode['num_cols'];
+            canvas.height = bh * barcode['num_rows'];
+            container.appendChild(canvas);
+
+            var ctx = canvas.getContext('2d');                    
+
+            // graph barcode elements
+            var y = 0;
+            // for each row
+            for (var r = 0; r < barcode['num_rows']; ++r) {
+                var x = 0;
+                // for each column
+                for (var c = 0; c < barcode['num_cols']; ++c) {
+                    if (barcode['bcode'][r][c] == 1) {                        
+                        ctx.fillRect(x, y, bw, bh);
+                    }
+                    x += bw;
+                }
+                y += bh;
+            }       
+        }
+
+
+    </script>
+</head>
 
 <body>
     <header>
         <div class="headArea">
-            <img class="imgSize" <img src="{{asset "/reports/WhatsApp Image 2022-03-15 at 20.44.03.jpeg" "dataURI"}}" />
+            <img class="imgSize" <img src="{{asset "/reports/Obuka/ReportDrugi/logo_pfst_cedo.png" "dataURI"}}" />
         </div>
         <div class="textArea">
-            <p>Pomorski fakultet u Splitu<br>
-                Rudera Boškovica 37, HR-21000 Split<br>
+            <p id="textToEncode">Pomorski fakultet u Splitu<br>
+                Rudera Bo�kovica 37, HR-21000 Split<br>
                 tel.:+385 (0)21 619 399, Porta<br><br>
-                Registrirano na Trgovačkom sudu u Splitu<br>
+                Registrirano na Trgova?kom sudu u Splitu<br>
                 MBS: 060144741, OIB: 24624257529, MB: 01406043<br>
                 Poslovna banka: OTP banka,<br>
                 IBAN: HR2324070001100059179, SWIFT: OTPVHR2X<br>
@@ -31,12 +88,12 @@
             <p>Manenica Ante<br>
             OIB: 50077557350<br>
             Zrinski i Frankopana 39<br>
-            20350 Metković</p>
+            20350 Metkovi?</p>
         </div>
         <div class="container1">
             <div class="par1">
                 <p>Dat. isporuke <br>
-                Datum dospjeća  <br>
+                Datum dospje?a  <br>
                 Mjesto, dana</p>
             </div>
             <div class="par2">
@@ -53,14 +110,14 @@
             </div>
             <div class="par4">
                 <p>
-                    Marija Dragaš<br>
+                    Marija Draga�<br>
                     prof. dr. sc. Pero Vidan
                 </p>
             </div>
         </div>
         <div class="container2">
             <div class="par5">
-                    <p id="textRac"><b>Račun</b><br></p>
+                    <p id="textRac"><b>Ra?un</b><br></p>
             </div>
             <div class="par6">
                 <p>22-361-000267</p>
@@ -78,7 +135,7 @@
     <tr bgcolor="#ccc" style="border: 1px black solid">
         <th style="border-left: 1px white solid" scope="col" width="200">Ident</td>
         <th scope="col" width="500">Naziv</td>
-        <th scope="col" width="100">Količina</td>
+        <th scope="col" width="100">Koli?ina</td>
         <th scope="col" width="100">MJ</td>
         <th scope="col" width="300">Cijena</td>
         <th scope="col" width="200">R. %</td>
@@ -137,7 +194,7 @@
         </p>
     </div>
 </div>
-<div class="leftOne";><p><b>Slovima</b>&nbsp&nbsp&nbsp četiristo, HRK</p></div>
+<div class="leftOne";><p><b>Slovima</b>&nbsp&nbsp&nbsp ?etiristo, HRK</p></div>
 
     </main>
 
@@ -181,21 +238,20 @@
   <div style="float:right;width:100%;"class="payment";>
       
       <p>
-            Oslobođeno PDV-a sukladno Članku 39. st. 1 pod i), Zakona o porezu na dodanu vrijednost.
+            Oslobo?eno PDV-a sukladno ?lanku 39. st. 1 pod i), Zakona o porezu na dodanu vrijednost.
             <p>
-            Račun je izdan elektroničkim putem te je pravovaljan bez pečata i potpisa.
+            Ra?un je izdan elektroni?kim putem te je pravovaljan bez pe?ata i potpisa.
             </p>
             
             
        </p>
        <br></br>
-       <p>U plaćanju platnim nalogom navedite model 00 i poziv <b>26722</b> </p>
+       <p>U pla?anju platnim nalogom navedite model 00 i poziv <b>26722</b> </p>
        
       </div>
 
-
+    <div id="barcode"><canvas width="350" height="208"></canvas></div>
 </body>
-
 
 
 
