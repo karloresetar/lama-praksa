@@ -1,0 +1,143 @@
+<meta meta charset=utf-8>
+<div class="card">
+    <p-table #dt1 [value]="todoList" dataKey="id"
+        [rows]="10" styleClass="p-datatable-gridlines">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        ID Zadatka
+                        <p-columnFilter type="text" field="IDPredmetPismenoTask" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        P
+                        <p-columnFilter type="text" field="PripadnostZadatka" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Opis Zadatka
+                        <p-columnFilter type="text" field="KratkiOpis" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Rok izvršenja
+                        <p-columnFilter type="text" field="RokIzvrsenja" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+                
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Nositelj Zadatka
+                        <p-columnFilter type="text" field="Nositelj" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+                
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Naziv Vrste
+                        <p-columnFilter type="text" field="NazivTaskVrsta" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+                
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        % Izvršenja
+                        <p-columnFilter type="text" field="PostotakIzvrsenja" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+                
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Naziv task status
+                        <p-columnFilter type="text" field="NazivTaskStatus" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+                
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Unio
+                        <p-columnFilter type="text" field="Unio" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+                
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Klasa
+                        <p-columnFilter type="text" field="IDPredmet" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+                
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Promijenio
+                        <p-columnFilter type="text" field="Promijenio" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+                
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-todo>
+            <tr>
+                <td>
+                    <span class="textBlue">
+                    {{todo.IDPredmetPismenoTask}}
+                    </span>
+                </td>
+
+                <td> 
+                    <i class="pi" [ngClass]="{'pi-file': todo.PripadnostZadatka == 0, 'pi-times': todo.PripadnostZadatka != 0}"></i>
+                </td>
+
+                <td>
+                    {{todo.KratkiOpis}}
+                </td>
+
+                <td>
+                    {{todo.RokIzvrsenja}}
+                </td>
+
+                <td>
+                    {{todo.Nositelj}}
+                </td>
+                
+                <td>
+                    {{todo.NazivTaskVrsta}}
+                </td>
+                
+                <td>
+                    {{todo.PostotakIzvrsenja}}
+                </td>
+                
+                <td>
+                    {{todo.NazivTaskStatus}}
+                </td>
+                
+                <td>
+                    {{todo.Unio}}
+                </td>
+                
+                <td>
+                    {{todo.IDPredmet}}
+                </td>
+                
+                <td>
+                    {{todo.Promijenio}}
+                </td>
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="7">No customers found.</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

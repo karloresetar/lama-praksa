@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from 'src/app/services/todo.service';
 
 @Component({
   selector: 'app-home',
@@ -8,34 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   todos:any[];
-  constructor() { }
+  constructor(public todoService: TodoService) { }
 
   ngOnInit(): void {
-    this.todos = [{
-      label: 'Današnji zazdaci',
-      kategorija: 'Posao',
-      datum: new Date(),
-      stavke: [{
-        label: 'marenda',
-        isCompleted: true,
-      },
-      {
-        label: 'odradit smjenu',
-        isCompleted: true,
-      },
-      {
-        label: 'očistit kuću',
-        isCompleted: false,
-      },
-      {
-        label: 'ić leć',
-        isCompleted: true,
-      },
-
-      ],
-    },
-  ];
+    this.todoService.getAllTodos().subscribe((res: any) => {
+      const { todos } = res;
+      this.todos = todos;
+    });
   }
 }
-
-// "manreda","odradit smjenu","očistit kuću","ić leć"
